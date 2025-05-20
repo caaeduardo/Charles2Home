@@ -1,0 +1,286 @@
+body 
+{
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header
+{
+    position: fixed; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    
+    background-color: #009991;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Adiciona esta linha */
+    top: 0;          /* Garante que o header fique no topo */
+    left: 0;         /* Garante que o header comece na borda esquerda */
+    width: 100%;      /* Garante que o header ocupe toda a largura */
+    z-index: 100;     /* Garante que o header fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: adiciona uma sombra */
+    transition: background-color 0.3s ease;
+    
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 5px;
+}
+
+.header-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header-right li {
+    margin-left: 20px;
+}
+
+.header-right a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: aquamarine;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.header-right .my-tickets {
+    position: relative;
+}
+
+.header-right .my-tickets .badge {
+    background-color: #936bff;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 0.7em;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.header-right .user-info {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.header-right .user-info .initials {
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #000000;
+    padding: 80px 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    background-image: url('hero-bg.png'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    color: aquamarine;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(158, 31, 31, 0.1);
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    padding: 10px;
+    flex-grow: 1;
+    font-size: 1em;
+    outline: none;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: rgb(121, 211, 181);
+    font-size: 1.2em;
+}
+
+/* Services Section */
+.services {
+    background-color: rgb(220, 240, 233);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: rgb(180, 240, 220);
+    border-radius: 5px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    height: 50px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.service-card h3 {
+    color: #104b3e;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.service-card p {
+    color: #555;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.service-card a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* Chat Widget */
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: aquamarine;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-right ul {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-right li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .header-right .user-info {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .services {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+}
+
+    .popular-links {
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .popular-links h2 {
+        color: aquamarine;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+    }
+
+    .popular-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 10px;
+    }
+
+    .popular-links li {
+        background-color: white;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .popular-links a {
+        color: #104b3e;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
